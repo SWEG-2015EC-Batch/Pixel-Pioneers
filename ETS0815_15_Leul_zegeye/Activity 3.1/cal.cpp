@@ -1,50 +1,58 @@
 #include <iostream>
-#include <math.h>
 using namespace std;
 
-int main(){
+int main() {
     int status;
     do
     {
-    cout<<"Enter the first number: ";
-    float first;
-    cin>> first;
-    cout<<"Enter the second number: ";
-    float second;
-    cin>> second;
-    char op;
-    cout<<"Enter the operation: ";
-    cin>> op;
-    switch(op){
-    case '+':
-    cout<< first + second;
-    break;
-    case '-':
-    cout<< first - second;
-    break;
-    case '*':
-    cout<< first * second;
-    break;
-    case '/':
-    if (second == 0)
-    {
-        cout<< "Undefined";
-    }
-    else
-    {
-       cout<< first / second;
-    }
-    break;
-    default:
-    cout<< "Invalid opreator";
-    break;
-    }
+        float first;
+        cout <<"Enter the first number: ";
+        cin >> first;
+
+        float second;
+        cout <<"Enter the second number: ";
+        cin >> second;
+
+        char op;
+        cout <<"Enter the operation: "; // operations(+ , - , * , / )
+        cin >> op;
+
+        switch(op)
+        {
+            case '+':
+            cout << first + second;
+            break;
+
+            case '-':
+            cout << first - second;
+            break;
+
+            case '*':
+            cout << first * second;
+            break;
+
+            case '/':
+            if(second == 0)
+            {
+                cout <<"Undefined \n";
+
+            }
+            else
+            {
+                cout << first/second;
+            }
+            break;
+            default:
+            cout <<"Invalid operator. \n";
+            break;
+        }
+        cout <<endl;
+        cout <<"Enter 0 to terminate and any other number to continue: \n";
+        cin >> status;
+        cout << endl;
+
+    } while (status!=0);
+    return 0;
     
-    cout<<"Please enter zero to terminate the program or 1 to continue";
-    cin>> status;
-    cout<< endl;
-    } while(status != 0);
+}
 
-
-    return 0; 
-    }
