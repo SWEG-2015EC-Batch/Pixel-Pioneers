@@ -1,8 +1,8 @@
 #include<iostream>
 using namespace std;
 int main(){
-    
-
+        bool stop = true;
+do{ 
     cout<<"**********************************************************" <<endl;
     cout<<"********************choice********************************" <<endl;
     cout<<"**********************************************************" <<endl;
@@ -14,11 +14,7 @@ int main(){
     cout<<"5. inverted half pyramid "<<endl;
     cout<<"6. hollow rectangle "<<endl;
     cout<<"7. hollow inverted half rectangle"<<endl;
-    cout<<"8. half number pyramid"<<endl;
 
-
-
- do{ 
     int choice;
     cin>>choice;
 
@@ -135,31 +131,8 @@ int n,m;
             cout<<endl;
         }
 break;
-
-
-
-
-
-
-
 }
-case 8:
- int n, j;
-        for(int i=1; i<=5; i++)
-    {
-        for(int j=1; j<=i; j++)
-        {
-            cout<<j<<" ";
-
-             }
-        cout<<endl;
-    }
-
-
-break;
-
-
- } while(choice!=0);
+ } while(stop);
    
 
 
