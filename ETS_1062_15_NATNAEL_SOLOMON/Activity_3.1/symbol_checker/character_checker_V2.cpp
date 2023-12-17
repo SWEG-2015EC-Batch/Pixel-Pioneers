@@ -19,44 +19,36 @@ int main()
         // checks if the character is a letter
         if (isalpha(character))
         {
-            if (isupper(character)) // checks if it's uppercase letter
+
+            // checks if it's uppercase or lowercase letter
+            if (isupper(character))
             {
-                switch (character) // checks if it's vowel/consonant
-                {
-                case 'A':
-                case 'E':
-                case 'I':
-                case 'O':
-                case 'U':
-                    cout << character << " is a vowel uppercase letter.\n\v";
-                    break;
-                default:
-                    cout << character << " is a consonant uppercase letter.\n\v";
-                    break;
-                }
+                cout << character << " is an uppercase letter.\n\v";
             }
             else
-            { // checks if it's vowel/consonant lowercase letter
-
-                switch (character)
-                {
-                case 'a':
-                case 'e':
-                case 'i':
-                case 'o':
-                case 'u':
-                    cout << character << " is a vowel lowercase letter.\n\v";
-                    break;
-
-                default:
-                    cout << character << " is a consonant lowercase letter.\n\v";
-                    break;
-                }
+            {
+                cout << character << " is a lowercase letter.\n\v";
+            }
+            
+             //checks if it's a vowel/consonant letter
+            switch (toupper(character))
+            {
+            case 'A':
+            case 'E':
+            case 'I':
+            case 'O':
+            case 'U':
+                cout << character << " is a vowel letter.\n\v";
+                break;
+            default:
+                cout << character << " is a consonant letter.\n\v";
+                break;
             }
         }
-          
+
         else if (isdigit(character)) // checks if it's a digit
         {
+
             int theActual_int;
             theActual_int = character - 48; // since 0=48 in the context of ascii, converts it to the actual integer inputted
 
@@ -69,8 +61,10 @@ int main()
                 cout << character << " is an odd number.\n\v";
             }
         }
+
         else
         { // characters which are neither letters nor digits end up here
+
             cout << character << " is a special character.\n\v";
         }
 
