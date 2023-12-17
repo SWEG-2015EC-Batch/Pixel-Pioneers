@@ -180,7 +180,7 @@ int main()
                 }
                 break;
             default:
-                cout << "\vTry again! You have entered an invalid number.\n";
+                cout << "\vInvalid choice! Try again.\n\v";
                 break;
             }
         }
