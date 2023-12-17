@@ -55,50 +55,6 @@ Set startingpoint1 to 'a' and startingpoint2 to 1
 9, End the main function
 
 ## Flowchart
-``` mermaid
-graph TD
-A((Start)) -->|Choice 1| B{Choice 1}
-B -->|1| C[Rectangle]
-B -->|2| D[Hollow Rectangle]
-B -->|3| E[Full Pyramid]
-B -->|4| F[Inverted Full Pyramid]
-B -->|5| G[Half Full Pyramid]
-B -->|6| H[Inverted Half Pyramid]
-B -->|7| I[Hollow Full Pyramid]
-B -->|8| J[Inverted Hollow Half Pyramid]
-C -->K((End))
-D -->K
-E -->K
-F -->K
-G -->K
-H -->K
-I -->K
-J -->K
-K((End)) -->|Status| L{Status}
-L -->|0| A
-L -->|Any other digit| B
-B -->|Choice 2| M{Choice 2}
-M -->|1| N[Square (Numbers)]
-M -->|2| O[Right Angled Triangle (Numbers)]
-M -->|3| P[Square (Alphabets)]
-M -->|4| Q[Right Angled Triangle (Alphabets)]
-M -->|5| R[Reversed Right Angled Triangle (Numbers)]
-M -->|6| S[Square (a-x) (SPECIAL)]
-N -->T((End))
-O -->T
-P -->T
-Q -->T
-R -->T
-S -->T
-T((End)) -->|Status| U{Status}
-U -->|0| A
-U -->|Any other digit| B
-B -->|Choice 3| V{Choice 3}
-V -->|1| W[Have a nice day!]
-V -->|2| A
-W -->X((End))
-X -->Y{Status}
-Y -->|0| Z((End))
-Y -->|Any other digit| B
+
 
 
