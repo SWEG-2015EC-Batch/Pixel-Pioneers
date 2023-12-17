@@ -27,7 +27,7 @@ Set startingpoint1 to 'a' and startingpoint2 to 1
         Display the options for asterisk patterns
         ask the user to enter the number of their choice
         Read the input into choice3
-        Prompt the user to enter the number of rows
+        ask the user to enter the number of rows
         Read the input into row
 
        - Based on choice3, execute the corresponding pattern code using switch-case
