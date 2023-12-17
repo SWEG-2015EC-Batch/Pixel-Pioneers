@@ -7,7 +7,7 @@ int main()
 
     do
     {
-        double test, double quiz, project, assignment, exam, assesment=0, result=0;
+        double test, quiz, project, assignment, exam, assesment=0, result=0;
 
         cout << "\venter your test result (15%): ";
         cin >> test;
