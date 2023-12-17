@@ -310,9 +310,14 @@ int main()
             cout << "\vHave a nice day!\v" << endl;
             return 0;
         }
+        else
+        {
+            cout<< "Invalid number! Try again.\n\v";
+        }
 
         cout << "Enter 0 to leave or enter any other (single) digit to go back to the main menu: ";
         cin >> status;
+        
     } while (status);
 
     return 0;
