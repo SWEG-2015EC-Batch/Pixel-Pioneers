@@ -15,9 +15,9 @@ int main()
         cin >> quiz;
         cout << "\venter your project result (20%): ";
         cin >> project;
-        cout << "\venter your assignment result(10%): ";
+        cout << "\venter your assignment result (10%): ";
         cin >> assignment;
-        cout << "\venter your final exam result(50%):";
+        cout << "\venter your final exam result (50%):";
         cin >> exam;
 
         assesment = test + assignment + project + quiz;
