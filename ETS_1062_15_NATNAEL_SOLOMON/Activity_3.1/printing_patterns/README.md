@@ -23,49 +23,36 @@ Set startingpoint1 to 'a' and startingpoint2 to 1
     ask the user to enter the number of their choice
     store the input into choice1
 
-    3, If choice1 is 1
+    a, If choice1 is 1
         Display the options for asterisk patterns
         ask the user to enter the number of their choice
         Read the input into choice3
         Prompt the user to enter the number of rows
         Read the input into row
 
-       3.1, Based on choice3, execute the corresponding pattern code using switch-case
+       - Based on choice3, execute the corresponding pattern code using switch-case
           
-    4, Else if choice1 is 2
+    b, Else if choice1 is 2
         Display the options for numeric and alphabetic patterns
         ask the user to enter the number of their choice
         store the input into choice2
         ask the user to enter the number of rows
         store the input into row
 
-       4.1, Based on choice2, execute the corresponding pattern code using switch-case
+       - Based on choice2, execute the corresponding pattern code using switch-case
            
-    5, Else if choice1 is 3
+    c, Else if choice1 is 3
         exit the program
 
-    6, Else
+    d, Else
         Display an error message for an invalid choice
-
-   7,  Prompt the user to enter 0 to leave or any other single digit to go back to the main menu
+        
+7,  Prompt the user to enter 0 to leave or any other single digit to go back to the main menu
     Read the input into status
+    
 8, End the do-while loop
 
 9, End the main function
 
 ## Flowchart
-``` mermaid
-graph TD
-A((Start)) -->|Initialize variables| B{Menu}
-B -->|Choice 1| C[Asterisk Patterns]
-B -->|Choice 2| D[Numeric and Alphabetic Patterns]
-B -->|Choice 3| E[Exit]
-C -->|Choose pattern| F[Rectangle, Hollow rectangle, Full pyramid, Inverted full pyramid, Half full pyramid, Inverted half pyramid, Hollow full pyramid, Inverted hollow half pyramid]
-D -->|Choose pattern| G[Square (Numbers), Right angled triangle (Numbers), Square (Alphabets), Right angled triangle (Alphabets), Reversed right angled triangle (Numbers), Square (a-x)]
-F -->|Draw pattern| H{Continue?}
-G -->|Draw pattern| I{Continue?}
-H -->|Yes| B
-H -->|No| B
-I -->|Yes| B
-I -->|No| B
-E -->|Exit| J((End))
+
