@@ -49,4 +49,6 @@ int main()
              << endl;
 
     } while (status);
+
+    return 0;
 }
