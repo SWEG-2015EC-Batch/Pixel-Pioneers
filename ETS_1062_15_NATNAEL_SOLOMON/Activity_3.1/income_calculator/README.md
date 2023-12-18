@@ -22,11 +22,16 @@ The program outputs the following:
 ## Pseudocode
 
 1.Start
-    a.Declare weeklyhours, gross_salary, overtimebonusrate_perhour as Double
-    b.Declare pensionrate, overtime_payment, income_tax as Double
-    c.Set pensionrate = 0.07
-    d.Set overtime_payment = 0.0
-    e.Set income_tax = 0.0
+```
+a.Declare weeklyhours, gross_salary, overtimebonusrate_perhour as Double
+    
+b.Declare pensionrate, overtime_payment, income_tax as Double
+    
+c.Set pensionrate = 0.07
+    
+d.Set overtime_payment = 0.0
+    
+e.Set income_tax = 0.0
 
     1.Display "Enter weekly working hours: "
     Input weeklyhours
