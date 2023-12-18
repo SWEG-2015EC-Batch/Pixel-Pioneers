@@ -18,4 +18,4 @@
    - After processing the input, the program prompts the user to enter 0 to exit or any other number to continue.
 
 
-
+## Pseudocode
