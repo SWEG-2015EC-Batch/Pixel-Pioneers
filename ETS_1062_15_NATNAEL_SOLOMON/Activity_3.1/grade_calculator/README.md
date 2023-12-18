@@ -1,65 +1,58 @@
+
 ## Problem Analysis
-                                  
-### Input 
-The program takes the following input:
-- **rusult**: The total result in percentage (out of 100).
-
-### Process 
-The program uses a do-while loop to repeatedly prompt the user for input and process the result until the user decides to leave the program.
-
-It evaluates the result and assigns a grade based on the following criteria:
-   - If the result is greater than or equal to 90, the grade is A+.
-   - If the result is between 80 and 89, the grade is A.
-   - If the result is between 75 and 79, the grade is B+.
-   - If the result is between 60 and 74, the grade is B.
-   - If the result is between 55 and 59, the grade is C+.
-   - If the result is between 45 and 54, the grade is C.
-   - If the result is between 30 and 45, the grade is D.
-   - If the result is below 30, the grade is F.
-
-After evaluating the result, the program prompts the user to enter 0 to leave or any other number to continue.
-
-### Output 
-The program outputs the following:
-- The corresponding grade based on the input result.
-- A prompt to leave the program or continue.
-
-The program provides a simple and effective way to evaluate a grade based on the input result and allows the user to continue or leave based on their choice.
+    Input: Total mark out of 100
+    Process: Checking in which range the mark falls
+    Output: The Grade for the corresponding range
 
 ## Pseudocode
-```
-1.Start
-    a.Declare status as Integer
+    
+    Print "Enter the student's mark out of 100: "
+    Read mark
+    
+    If mark is between 0 and 100 inclusive:
+        If mark < 30, set result to "F"
+        Else if mark < 45, set result to "D"
+        Else if mark < 55, set result to "C"
+        Else if mark < 60, set result to "C+"
+        Else if mark < 75, set result to "B"
+        Else if mark < 80, set result to "B+"
+        Else if mark < 90, set result to "A"
+        Else set result to "A+"
+        
+        Print "The corresponding grade to your mark is ", result
+    Else:
+        Print "Wrong input, please enter a number between 0 and 100 inclusive"
+    End If
 
-    b.Do
-        1.Declare result as Double
-        2.Display "Enter your total result (100%): "
-        3.Input result
+## Flowchart
 
-        4.Display "____________________________\n\v"
-        5.If result >= 90 Then
-            Display "Your grade is : A+"
-        6.Else If result >= 80 Then
-            Display "Your grade is : A"
-        7.Else If result >= 75 Then
-            Display "Your grade is : B+"
-        8.Else If result >= 60 Then
-            Display "Your grade is : B"
-        9.Else If result >= 55 Then
-            Display "Your grade is : C+"
-        10.Else If result >= 45 Then
-            Display "Your grade is : C"
-        11.Else If result >= 30 And result <= 45 Then
-            Display "Your grade is : D"
-        12.Else
-            Display "Your grade is : F"
-        13.End If
-        14.Display "____________________________\n\v"
+```mermaid
+graph TB
 
-  c.Display "Enter 0 to leave or any other number to continue: "
-  d.Input status
-  e.While status
-
-2. Return 0
-3. End
-```
+Start(Start) --> mark[/Read the mark/]
+mark --> ifmaincase{"0 <= number <= 100"}
+ifmaincase -- True --> Fcase{"Is number less than 30"}
+Fcase -- True --> resultF[result is F]
+Fcase -- False --> Dcase{"Is number less than 45"}
+Dcase -- True --> resultD[result is D]
+Dcase -- False --> Ccase{"Is number less than 55"}
+Ccase -- True --> resultC[result is C]
+Ccase -- False --> CPcase{"Is number less than 60"}
+CPcase -- True --> resultCP["result is C+"]
+CPcase -- False --> Bcase{"Is number less than 75"}
+Bcase -- True --> resultB[result is B]
+Bcase -- False --> BPcase{"Is number less than 80"}
+BPcase -- True --> resultBP["result is B+"]
+BPcase -- False --> Acase{"Is number less than 90"}
+Acase -- True --> resultA[result is A]
+Acase -- False --> resultAP[result is A+]
+resultF --> Finalresult[Showing Grade]
+resultD --> Finalresult
+resultC --> Finalresult
+resultCP --> Finalresult
+resultB --> Finalresult
+resultBP --> Finalresult
+resultA --> Finalresult
+resultAP --> Finalresult
+ifmaincase -- False --> Final(End)
+Finalresult --> Final
