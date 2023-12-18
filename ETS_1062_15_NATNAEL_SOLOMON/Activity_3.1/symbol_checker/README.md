@@ -4,8 +4,48 @@
   Output: Return the identity
 
 ## Pseudocode
+```
+1.Start
+    a.Declare status as Integer
+    b.Declare character as Character
 
+    c.Do
+        1.Display "Enter a single character: "
+        2.Input character
 
+        3.If isalpha(character) Then
+            a.If isupper(character) Then
+                Display character + " is an uppercase letter.\n\v"
+            b.Else
+                Display character + " is a lowercase letter.\n\v"
+            c.End If
+
+            d.Switch toupper(character)
+                1.Case 'A', 'E', 'I', 'O', 'U':
+                    Display character + " is a vowel letter.\n\v"
+                2.Default:
+                    Display character + " is a consonant letter.\n\v"
+            e.End Switch
+        4.Else If isdigit(character) Then
+            a.Declare theActual_int as Integer
+            b.Set theActual_int = character - 48
+            c.If theActual_int % 2 == 0 Then
+                Display character + " is an even number.\n\v"
+            d.Else
+                Display character + " is an odd number.\n\v"
+            e.End If
+        5.Else
+            Display character + " is a special character.\n\v"
+        End If
+
+        6.Display "Enter 0 to exit or any other number to continue: "
+        7.Input status
+    d.While status
+
+2.Return 0
+3.End
+
+```
 ## Flowchart
 ```mermaid
 graph TB
