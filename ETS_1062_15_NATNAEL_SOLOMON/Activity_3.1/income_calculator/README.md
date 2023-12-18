@@ -66,5 +66,6 @@ The program outputs the following:
     d.Display netpay + " is your net take-home pay.\v"
 
   4.Return 0
+  
 5.End
 
