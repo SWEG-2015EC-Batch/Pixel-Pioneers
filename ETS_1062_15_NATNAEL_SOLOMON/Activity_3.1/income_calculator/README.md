@@ -47,23 +47,23 @@ e.Set income_tax = 0.0
         Set overtime_payment = 0
     5.End If
 
-    1.If 3500 <= gross_salary Then
+         1.If 3500 <= gross_salary Then
         Set income_tax = gross_salary * 0.30
-    2.Else If 3500 > gross_salary And 2000 <= gross_salary Then
+         2.Else If 3500 > gross_salary And 2000 <= gross_salary Then
         Set income_tax = gross_salary * 0.25
-    3.Else If 2000 > gross_salary And 1200 <= gross_salary Then
+         3.Else If 2000 > gross_salary And 1200 <= gross_salary Then
         Set income_tax = gross_salary * 0.20
-    4.Else If 1200 > gross_salary And 600 <= gross_salary Then
+         4.Else If 1200 > gross_salary And 600 <= gross_salary Then
         Set income_tax = gross_salary * 0.15
-    5.Else If 600 > gross_salary And 200 <= gross_salary Then
+         5.Else If 600 > gross_salary And 200 <= gross_salary Then
         Set income_tax = gross_salary * 0.10
-    6.Else
+         6.Else
         Set income_tax = gross_salary * 0.00
-    7.End If
+         7.End If
 
-    8.Set pension = pensionrate * gross_salary
+        8.Set pension = pensionrate * gross_salary
   
-    9.Set netpay = (gross_salary - pension - income_tax) + overtime_payment
+        9.Set netpay = (gross_salary - pension - income_tax) + overtime_payment
 
     a.Display pension + " is the pension deducted from your salary."
     b.Display income_tax + " is the income tax deducted from your salary."
