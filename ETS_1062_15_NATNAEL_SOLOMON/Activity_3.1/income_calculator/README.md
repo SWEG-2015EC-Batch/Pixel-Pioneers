@@ -76,42 +76,5 @@ e.Set income_tax = 0.0
 ```
 ## Flowchart
 ```mermaid
-graph LR
-Start((Start)) --> |Declare| a(Declare weeklyhours, gross_salary, overtimebonusrate_perhour as Double)
-Start --> |Declare| b(Declare pensionrate, overtime_payment, income_tax as Double)
-Start --> |Set| c(Set pensionrate = 0.07)
-Start --> |Set| d(Set overtime_payment = 0.0)
-Start --> |Set| e(Set income_tax = 0.0)
-a --> 1(Display "Enter weekly working hours: ")
-1 --> |Input| weeklyhours
-b --> 2(Display "Enter gross salary: ")
-2 --> |Input| gross_salary
-1 --> 3{weeklyhours > 40?}
-3 -- Yes --> 4(Display "Enter over-time bonus rate: ")
-4 --> |Input| overtimebonusrate_perhour
-4 --> |Set| Set overtime_payment = ((weeklyhours - 40) * overtimebonusrate_perhour)
-3 -- No --> 5(Set overtime_payment = 0)
-5 --> 1
-2 --> 1.1{3500 <= gross_salary?}
-1.1 -- Yes --> 6(Set income_tax = gross_salary * 0.30)
-1.1 -- No --> 1.2{3500 > gross_salary And 2000 <= gross_salary?}
-1.2 -- Yes --> 7(Set income_tax = gross_salary * 0.25)
-1.2 -- No --> 1.3{2000 > gross_salary And 1200 <= gross_salary?}
-1.3 -- Yes --> 8(Set income_tax = gross_salary * 0.20)
-1.3 -- No --> 1.4{1200 > gross_salary And 600 <= gross_salary?}
-1.4 -- Yes --> 9(Set income_tax = gross_salary * 0.15)
-1.4 -- No --> 1.5{600 > gross_salary And 200 <= gross_salary?}
-1.5 -- Yes --> 10(Set income_tax = gross_salary * 0.10)
-1.5 -- No --> 11(Set income_tax = gross_salary * 0.00)
-6 --> 8
-7 --> 8
-8 --> 9
-9 --> 10
-10 --> 11
-11 --> a1(Set pension = pensionrate * gross_salary)
-a1 --> b1(Set netpay = (gross_salary - pension - income_tax) + overtime_payment)
-b1 --> c1(Display pension + " is the pension deducted from your salary.")
-c1 --> d1(Display income_tax + " is the income tax deducted from your salary.")
-d1 --> e1(Display overtime_payment + " is your over-time payment.")
-e1 --> f1(Display netpay + " is your net take-home pay.\v")
-f1 --> 4
+
+
