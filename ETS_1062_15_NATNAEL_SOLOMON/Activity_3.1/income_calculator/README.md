@@ -61,9 +61,9 @@ e.Set income_tax = 0.0
         Set income_tax = gross_salary * 0.00
     7.End If
 
-  2.Set pension = pensionrate * gross_salary
+    8.Set pension = pensionrate * gross_salary
   
-  3.Set netpay = (gross_salary - pension - income_tax) + overtime_payment
+    9.Set netpay = (gross_salary - pension - income_tax) + overtime_payment
 
     a.Display pension + " is the pension deducted from your salary."
     b.Display income_tax + " is the income tax deducted from your salary."
