@@ -1,21 +1,32 @@
-## Problem Analysis for V2
-### 1. Input
-   - The program prompts the user to enter a single character.
-   - The user provides input by entering a single character.
-
-### 2. Process
-   - The program checks whether the input character is a letter, digit, or special character using the **isalpha()** and **isdigit()** functions.
-   - If the input is a letter, the program further checks if it's uppercase or lowercase, and whether it's a vowel or consonant.
-   - If the input is a digit, the program determines whether it's an even or odd number.
-   - If the input is neither a letter nor a digit, it is identified as a special character.
-
-### 3. Output
-- the program outputs the following information:
-     - Whether the input is an uppercase or lowercase letter.
-     - Whether the input is a vowel or consonant letter.
-     - Whether the input is an even or odd number.
-     - Whether the input is a special character.
-   - After processing the input, the program prompts the user to enter 0 to exit or any other number to continue.
-
+## Problem Analysis
+  Input: A character to identify its identity
+  Process: Identify if the character is an odd or even number, consonant or vowel, uppercase or lowercase alphabet, or a special case
+  Output: Return the identity
 
 ## Pseudocode
+
+
+## Flowchart
+```mermaid
+graph TB
+  start(start) --> InputChar[/Receive the character x/]
+  InputChar --> IsAlpha{"isalpha(x)"}
+  IsAlpha -- True --> IsUpper{"isupper(x)"}
+  IsUpper -- True --> IsVowel{"It is vowel"}
+  IsVowel -- True --> UpperVowel[/Vowel, Uppercase, letter/]
+  IsVowel -- False --> UpperConsonant[/Consonant, Uppercase, letter/]
+  IsUpper -- False --> IsVowelLower{"It is vowel"}
+  IsVowelLower -- True --> LowerVowel[/Vowel, Lowercase, letter/]
+  IsVowelLower -- False --> LowerConsonant[/Consonant, Lowercase, letter/]
+  IsAlpha -- False --> IsNum{"isdigit(x)"}
+  IsNum -- True --> IsEven{"x % 2 == 0"}
+  IsEven -- True --> EvenNum[/Even Number/]
+  IsEven -- False --> OddNum[/Odd NUmber/]
+  IsNum -- False --> Special[/Special Character/]
+  UpperVowel --> End(End)
+  UpperConsonant --> End
+  LowerVowel --> End
+  LowerConsonant --> End
+  EvenNum --> End
+  OddNum --> End
+  Special --> End
