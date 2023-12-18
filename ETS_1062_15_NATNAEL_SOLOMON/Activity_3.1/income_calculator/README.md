@@ -57,6 +57,7 @@ The program outputs the following:
     7.End If
 
   2.Set pension = pensionrate * gross_salary
+  
   3.Set netpay = (gross_salary - pension - income_tax) + overtime_payment
 
     a.Display pension + " is the pension deducted from your salary."
