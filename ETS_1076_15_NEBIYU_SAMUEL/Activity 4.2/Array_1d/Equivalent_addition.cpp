@@ -1,14 +1,21 @@
 #include <iostream>
+#define MAX 10
 using namespace std;
 
 int main()
 {
    int ROWS,COLS;
-   cout<<"Enter number of rows: ";
-   cin>>ROWS;
-   cout<<"Enter number of columns :";
-   cin>>COLS;
-   int first[ROWS][COLS], second[ROWS][COLS], result[ROWS][COLS];
+   do
+   {
+      cout<<"Enter number of rows(max 10): ";
+      cin>>ROWS;
+   } while (ROWS > 10);
+   do
+   {
+      cout<<"Enter number of columns (max 10):";
+      cin>>COLS;
+   } while (COLS>10);
+   int first[MAX][MAX], second[MAX][MAX], result[MAX][MAX];
 
     // Reading values for the first array
     cout << "Enter elements for the first array:" << endl;
