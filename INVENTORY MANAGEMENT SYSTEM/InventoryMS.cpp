@@ -83,6 +83,100 @@ int main()
     for (int i = 0; i < 4; i++)
     {
         cout<<"Shopkeeper "<<i+1<<"'s is"<<bonus[i]<<endl;
+
+bool done = false;
+    do
+    {
+        cout<<"If you would like to search a product's record press 1.\n";
+        cout<<"If you would like to search a storekeeper's record press 2\n If you would like to exit press any other key\n";
+        if ((!cin>>n))
+        {
+            cout<<"Invalid Input";
+            return 1;
+        }
+        switch (n)
+        {
+            case 1:
+            do
+            { 
+                cout<<"Which product would you like to search for (Press 1-5 for single search 6 for the entire product)";
+                if (!cin>>n);
+                {
+                    cout<<"Invalid Input";
+                    return 1;
+                }
+            } while (n > 6);
+            
+           //Print the entire record
+            if (n == 6)
+            {
+                cout<<"Days\t\t\tQuantities per product\n";
+               cout<<"\t\t_________________________________________________________\n";
+                cout<<"\t\tProduct 1\t|Product 2\t|Product 3\t|Product 4\t|Product 5\n";
+                for (int i = 0; i < DAYS; i++)
+                {
+                    cout<<"Day "<<i+1<<"\t\t|";
+                    for (int j = 0; j < 5; j++)
+                    {
+                        cout<<products[j][i]<<"\t|";
+                    }
+                    cout<<endl;
+                }
+            }
+            //Print a single record
+            else
+            {                
+                cout<<"Days\t|Quantity of product "<<n<<endl;
+                for (int i = 0; i < DAYS; i++)
+                {
+                    cout<<"Day "<<i+1<<"\t|";
+                    cout<<products[n][i]<<endl;
+                }
+            }
+            break;
+            //Print the storekeeper's record
+            case 2:
+            do
+            { 
+                cout<<"Which storekeeper/s would you like to search for? (Press 1-4 for single search 5 for all storekeepers)";
+                if (!cin>>n);
+                {
+                    cout<<"Invalid Input";
+                    return 1;
+                }
+            } while (n > 5);
+            //Print the entire record
+            if (n == 5)
+            {
+                cout<<"Days\t\t\tQuantities per Warehouse\\Storekeeper\n";
+                cout<<"\t\t______________________________________________\n";
+                cout<<"\t\tStorekeeper 1\t|Storekeeper 2\t|Storekeeper 3\t|Storekeeper 4\n";
+                for (int i = 0; i < DAYS; i++)
+                {
+                    cout<<"Day "<<i+1<<"\t\t|";
+                    for (int j = 0; j < 4; j++)
+                    {
+                        cout<<warehouse[j][i]<<"\t|";
+                    }
+                    cout<<endl;
+                }
+            }
+            //Print a single record
+            else
+            {                
+                cout<<"Days\t|Quantity of storekeeper "<<n<<endl;
+                for (int i = 0; i < DAYS; i++)
+                {
+                    cout<<"Day "<<i+1<<"\t|";
+                    cout<<warehouse[n][i]<<endl;
+                }
+            }
+            break;
+            default:
+            done = true;
+            break;
+        }
+    } while (!done);
     }
   
   return 0;
