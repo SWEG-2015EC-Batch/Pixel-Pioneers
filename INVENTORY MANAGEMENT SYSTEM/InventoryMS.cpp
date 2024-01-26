@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-#define DAYS 30
+#define DAYS 2
 using namespace std;
 int main() {
         int warehouse[4][DAYS] = {
@@ -57,7 +57,7 @@ int main() {
                         warehouse[warehousenum - 1][i] = quantity;
                         products[producttype - 1][i] += quantity;
                         table[producttype - 1][warehousenum - 1] += quantity;
-                        
+                        break;
                 }
 
         }
@@ -245,7 +245,7 @@ int main() {
                 break;
         default:
                 cout << "Invalid choice, try again!\n";
-                return 1;
+                return 0;
 
         }
         exit:
