@@ -1,5 +1,5 @@
 # Project 1: Inventory Management System
-The program implements an inventory management system
+The program implements an inventory management system where 5 products can be stored in  4 warehouses
 
 # Features
 
