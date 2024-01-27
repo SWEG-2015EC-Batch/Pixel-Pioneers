@@ -112,7 +112,7 @@ int main() {
                  numofDAYS++;
                
                 //If the user wants to check the report before a month
-                cout << "\vPress " << (i + 2) << " to proceed to DAY " << (i + 2) << " or any other digit to go to the -: ";
+                cout << "\vPress " << (i + 2) << " to proceed to DAY " << (i + 2) << " or any other digit to go to Menu-2 -: ";
                 cin >> choice;
 
                 if ((choice) != (i + 2)) {
