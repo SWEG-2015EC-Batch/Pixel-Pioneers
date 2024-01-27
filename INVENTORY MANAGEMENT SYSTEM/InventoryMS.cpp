@@ -207,7 +207,7 @@ int main() {
                         cout << "\v------------------------------\n\v";
                         for (int i = 0; i < DAYS; i++) {
                                 cout << "Day " << i + 1 << "\t|";
-                                cout << products[producttype][i] << endl;
+                                cout << products[producttype - 1][i] << endl;
                         }
                         cout << "\v------------------------------\n\v";
                 }
