@@ -54,7 +54,7 @@ int main() {
                 cout << "\n | DAY " << (i + 1) << " |" << endl << endl; // Prints the day
 
                 // Iterates five times since there are 5 possible products
-                for (int j = 0; j < numOfproducts; j++) {
+                for (int j = 0; j < 20; j++) {
 
                         // Input - the warehouse where the product was stored at
                         do {
