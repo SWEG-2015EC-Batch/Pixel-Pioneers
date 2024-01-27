@@ -22,7 +22,7 @@ int main() {
         };
         
         char choice2;
-        int quantity, warehousenum, producttype, choice, choice3;
+        int quantity, warehousenum, producttype, choice, choice3, N;
         int numofDAYS =0, total_product = 0, total_invtry = 0, finalsum = 0;
         float bonus[4];
 
@@ -49,12 +49,15 @@ int main() {
 
 
   case 'A':
+   
         for (int i = 0; i < DAYS; i++) {
+           cout<<" How many storekeeper slip is getting reported? ";
+           cin>>N;
                              
                 cout << "\n | DAY " << (i + 1) << " |" << endl << endl; // Prints the day
 
                 // Iterates five times since there are 5 possible products
-                for (int j = 0; j < 20; j++) {
+                for (int j = 0; j < N; j++) {
 
                         // Input - the warehouse where the product was stored at
                         do {
