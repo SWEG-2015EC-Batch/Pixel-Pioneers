@@ -2,4 +2,4 @@
 
 ## Pattern A
 
-![image](./ETS_1062_15_NATNAEL_SOLOMON/img.jpg)
+![image](./ETS_1062_15_NATNAEL_SOLOMON/Img.jpg)
