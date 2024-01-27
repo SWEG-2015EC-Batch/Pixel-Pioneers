@@ -17,11 +17,11 @@ graph TD;
   E --> F[i++] --> G{"Is i'<'DAYS"};
   G -- Yes --> D;
   G -- No --> H[/Print tabular format/];
-  H --> I[/Do you like to view additional information on the
-  storkeepers or products/];
+  H --> I[/"Do you like to view additional information on the
+  storkeepers or products"/];
   I --> J{If}-- Yes --> M[Display single records of storekeeper or product within the month];
-  J -- No --> K[/Display
-  " Have a nice day! "/];
-  K --> L[(Stop)];
+  J -- No --> K[/"Display
+  'Have a nice day'"/];
+  K --> L([Stop]);
   M --> K;
   
