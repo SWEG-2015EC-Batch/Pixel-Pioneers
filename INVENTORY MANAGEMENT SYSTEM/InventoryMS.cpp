@@ -93,7 +93,7 @@ int main() {
                                 cout << "_______________________________________________________________________\n\v";
 
                                 //storing the quantity of the product on each iteration
-                                warehouse[warehousenum - 1][i] = quantity;
+                                warehouse[warehousenum - 1][i] += quantity;
                                 products[producttype - 1][i] += quantity;
                                 table[producttype - 1][warehousenum - 1] += quantity;
 
