@@ -51,7 +51,7 @@ int main() {
   case 'A':
    
         for (int i = 0; i < DAYS; i++) {
-           cout<<" How many storekeeper slip is getting reported? ";
+           cout<<" \vHow many storekeeper slip is getting reported? ";
            cin>>N;
                              
                 cout << "\n | DAY " << (i + 1) << " |" << endl << endl; // Prints the day
