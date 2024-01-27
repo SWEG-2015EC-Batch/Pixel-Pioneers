@@ -3,7 +3,7 @@
 #include <iomanip>
 #include <iostream>
 
-#define DAYS 2
+#define DAYS 30
 #define width 18
 using namespace std;
 
