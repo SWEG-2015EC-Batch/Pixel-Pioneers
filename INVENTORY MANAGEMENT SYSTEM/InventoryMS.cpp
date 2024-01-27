@@ -23,20 +23,19 @@ int main() {
 
         char choice2;
         int quantity, warehousenum, producttype, choice, choice3;
-        int numofDAYS = 0, total_product = 0, total_invtry = 0, finalsum = 0;
+        int numofDAYS = 0, total_product = 0, total_invtry = 0, finalsum = 0, counter = 0;
         float bonus[4];
 
         cout << "\v\v\v<==============================================================================>\n";
         cout << "           I N V E N T O R Y     M A N A G E M E N T     S Y S T E M             \n";
         cout << "<==============================================================================>\n\v";
 
-        cout << " \t\t\t\tW E L C O M E !\n\v";
         menu1:
-                cout << "\v----------------------------\n";
-        cout << "\vA.....START \n";
-        cout << "B.....ABOUT\n";
-        cout << "C.....QUIT THE PROGRAM\n\v";
-        cout << "-----------------------------\n\v";
+                cout << "\v  \t\t\t----------------------------\n";
+        cout << "\v \t\t\tA.....START \n\v";
+        cout << " \t\t\tB.....ABOUT\n\v";
+        cout << " \t\t\tC.....QUIT THE PROGRAM\n\v";
+        cout << "  \t\t\t----------------------------\n\v";
         cout << "ENTER YOUR CHOICE: ";
         cin >> choice2;
 
@@ -48,7 +47,7 @@ int main() {
                         cout << "\n | DAY " << (i + 1) << " |" << endl << endl; // Prints the day
 
                         // Iterates five times since there are 5 possible products
-                        for (int j = 0; j < numOfproducts; j++) {
+                        for (int j = 0; j < 20; j++) {
 
                                 // Input - the warehouse where the product was stored at
                                 do {
@@ -76,7 +75,10 @@ int main() {
                                 }
                                 do {
                                         cout << "\n\vWarehouse " << warehousenum << " has received and stored " << quantity << " unit/s of product " << producttype << ", Press 1 to Confirm or 0 to Deny: ";
-                                        cin >> choice;
+                                        if (!(cin >> choice)) {
+                                                cout << "Invalid Input\n";
+                                                return 1;
+                                        }
 
                                         if (choice == 0) {
                                                 j--;
@@ -94,21 +96,46 @@ int main() {
                                 warehouse[warehousenum - 1][i] = quantity;
                                 products[producttype - 1][i] += quantity;
                                 table[producttype - 1][warehousenum - 1] += quantity;
+
+                                if ((j + 1) % 2 == 0 && (j + 1) != 0 && (j + 1) != 2) {
+
+                                        cout << "Finished today's report? If so Press 1, if not 0: ";
+                                        if (!(cin >> choice3)) {
+                                                cout << "Invalid Input\n";
+                                                return 1;
+                                        }
+                                        cout << "\n_______________________________________________________________________\n\v";
+                                        if (choice3 == 1) {
+                                                break;
+                                        }
+
+                                }
+
                         }
                         //counts the number of days passed
                         numofDAYS++;
+                        do {
+                                //If the user wants to check the report before a month
+                                cout << "\vEnter " << (i + 2) << " to proceed to DAY " << (i + 2) << ", 0 to STARTOVER, or 1 to go to MENU-2: ";
+                                if (!(cin >> choice)) {
+                                        cout << "Invalid Input\n";
+                                        return 1;
+                                }
 
-                        //If the user wants to check the report before a month
-                        cout << "\vPress " << (i + 2) << " to proceed to DAY " << (i + 2) << " or any other digit to go to the -: ";
-                        cin >> choice;
-
-                        if ((choice) != (i + 2)) {
-                                break;
-                        }
+                                if (choice == 1) {
+                                        goto menu2;
+                                } else if (choice == 0) {
+                                        goto menu1;
+                                } else if (choice == (i + 2)) {
+                                        cout << endl;
+                                }
+                        } while (choice < 0 || (choice > (i + 2)));
                 }
 
                 menu2:
-                        cout << "\v\v===================> M E N U 2 <===================\n\v";
+                        cout << endl;
+
+                cout << "\v\v===================> M E N U 2 <===================\n\v";
                 if ((numofDAYS) == DAYS) {
                         cout << "\t1.....Tabular summary of a Month's Inventory.\n";
                 } else { //updates the menu since It's not the monthly report
@@ -125,7 +152,10 @@ int main() {
 
                 do {
                         cout << "Enter your choice here (0-5): ";
-                        cin >> choice;
+                        if (!(cin >> choice)) {
+                                cout << "Invalid Input\n";
+                                return 1;
+                        }
                 } while ((choice > 5) || (choice < 0));
 
                 switch (choice) {
@@ -240,8 +270,11 @@ int main() {
                         }
 
                         do {
-                                cout << "\vEnter 1 to go back to MENU-2 OR 0 to exit the program: \n";
-                                cin >> choice;
+                                cout << "\vEnter 1 to go back to MENU-2 OR 0 to exit the program: ";
+                                if (!(cin >> choice)) {
+                                        cout << "Invalid Input\n";
+                                        return 1;
+                                }
                         } while ((choice < 0) || (choice > 1));
 
                         if (choice == 0) {
@@ -284,7 +317,7 @@ int main() {
                         }
                         cout << "===========================================\n";
                         do {
-                                cout << "\vEnter 1 to go back to MENU-2 OR 0 to exit the program:  \n";
+                                cout << "\vEnter 1 to go back to MENU-2 OR 0 to exit the program:  ";
                                 cin >> choice;
                         } while ((choice < 0) || (choice > 1));
                         if (choice == 0) {
@@ -319,7 +352,10 @@ int main() {
 
                         do {
                                 cout << "\n\vEnter 1 to verify or 0 to deny: ";
-                                cin >> choice3;
+                                if (!(cin >> choice3)) {
+                                        cout << "Invalid Input\n";
+                                        return 1;
+                                }
                         } while ((choice3 < 0) || (choice3 > 1));
                         if (choice3 == 0) {
                                 goto menu2;
@@ -340,10 +376,13 @@ int main() {
 
                 do {
                         cout << "\n\vEnter 1 to go back to the MAIN MENU OR 0 to exit the program: ";
-                        cin >> choice3;
+                        if (!(cin >> choice3)) {
+                                cout << "Invalid Input\n";
+                                return 1;
+                        }
                 } while ((choice3 < 0) || (choice3 > 1));
                 if (choice3 == 0) {
-                        cout << "Have a nice day!\n";
+                        cout << "\nHave a nice day!\n";
                         return 0;
                 } else if (choice3 == 1) {
                         goto menu1;
