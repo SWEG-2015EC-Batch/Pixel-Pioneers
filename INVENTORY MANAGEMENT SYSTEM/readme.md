@@ -17,8 +17,8 @@ The program implements an **inventory management system** where 5 products can b
 
 # Team Members
 
-## Lealem Addis 
-## Leul Teferi
-## Leul Zegeye
-## Natnael Solomon 
-## Nebiyu Samuel
+## Lealem Addis      ETS 0812/15
+## Leul Teferi       ETS 0817/15
+## Leul Zegeye       ETS 0815/15
+## Natnael Solomon   ETS 1062/15
+## Nebiyu Samuel     ETS 1076/15
