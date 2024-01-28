@@ -14,3 +14,11 @@ The program implements an **inventory management system** where 5 products can b
 -Can also search for a storekeepers and products specific record.
 
 -Calculates the bonus of storekeepers at the end of the end of the month
+
+# Team Members
+
+## Lealem Addis 
+## Leul Teferi
+## Leul Zegeye
+## Natnael Solomon 
+## Nebiyu Samuel
