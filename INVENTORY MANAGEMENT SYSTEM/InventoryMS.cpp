@@ -9,6 +9,7 @@
 using namespace std;
 
 int main() {
+             menu1:
 
         const int numOfwarehouses = 4; // constant for the number of warehouses
         const int numOfproducts = 5; // constant for the number of products
@@ -30,7 +31,7 @@ int main() {
         cout << "           I N V E N T O R Y     M A N A G E M E N T     S Y S T E M             \n";
         cout << "<==============================================================================>\n\v";
 
-        menu1:
+       
                 cout << "\v  \t\t\t----------------------------\n";
         cout << "\v \t\t\tA.....START \n\v";
         cout << " \t\t\tB.....ABOUT\n\v";
